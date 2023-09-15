@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:news_app/presentation_layer/components/news_list_view_builder.dart';
 import 'package:news_app/presentation_layer/widgets/category_list_view.dart';
 import 'package:news_app/presentation_layer/widgets/custom_app_bar.dart';
-import 'package:news_app/presentation_layer/widgets/news_list_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
               SliverToBoxAdapter(
                   child: SizedBox(height: 15.h,)
               ),
-              const NewsListView(),
+              const NewsListViewBuilder(),
             ],
           ),
         ),
