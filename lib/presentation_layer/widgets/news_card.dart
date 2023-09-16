@@ -15,17 +15,17 @@ class NewsCard extends StatelessWidget {
         children: [
           ClipRRect(
               borderRadius: BorderRadius.circular(10.r),
-              child: Image.network(article.imagePath!)
+              child: article.imagePath != null ? Image.network(article.imagePath!) : Image.asset('assets/images/no_photo.png')
           ),
           SizedBox(height: 5.h,),
           Text(
-            article.title,
+            article.title ?? '',
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
           ),
           Text(
-            article.subTitle!,
+            article.subTitle ?? '',
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(fontSize: 12.sp, color: Colors.grey),

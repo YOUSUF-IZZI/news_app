@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
               SliverToBoxAdapter(
                   child: SizedBox(height: 15.h,)
               ),
-              const NewsListViewBuilder(),
+              const NewsListViewBuilder(category: 'general'),
             ],
           ),
         ),
