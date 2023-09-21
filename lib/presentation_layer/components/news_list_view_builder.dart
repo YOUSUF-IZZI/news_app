@@ -1,34 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:news_app/application_layer/services/news_service.dart';
 import 'package:news_app/domain_layer/models/article_model.dart';
 import 'package:news_app/presentation_layer/widgets/news_list_view.dart';
+import 'package:news_app/riverpod.dart';
 
 
-class NewsListViewBuilder extends StatefulWidget {
-  const NewsListViewBuilder({super.key, required this.category});
-  final String category;
-  @override
-  State<NewsListViewBuilder> createState() => _NewsListViewBuilderState();
-}
-
-class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
-  // var because we may receive null or different data
-  dynamic futureData;
-  @override
-  void initState() {
-    super.initState();
-    futureData = NewsService().getTopHeadlines(widget.category);
-  }
+class NewsListViewBuilder extends ConsumerWidget {
+  const NewsListViewBuilder({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return FutureBuilder<List<ArticleModel>>(
-      /*
-      * don't fetch data from API inside build method if it's payed because it will be call
-      * try to call fetch data method outside and pass the fetched data to a var variable
-      * then pass this variable to the future feature.
-      */
-        future: futureData,
+        future: NewsService().getTopHeadlines(ref.watch(categoryProvider)),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return NewsListView(

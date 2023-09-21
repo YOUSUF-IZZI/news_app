@@ -7,13 +7,13 @@ class CategoryListView extends StatelessWidget {
   const CategoryListView({super.key, });
 
   final List<String> categoryList = const [
-    'Business',
+    'General',
     'Entertainment',
-    'Health',
-    'Science',
     'Technology',
     'Sport',
-    'General'
+    'Business',
+    'Health',
+    'Science',
   ];
 
   @override

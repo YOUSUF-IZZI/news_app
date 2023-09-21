@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({
-    super.key,
-  });
+  const CustomAppBar({super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +12,7 @@ class CustomAppBar extends StatelessWidget {
         text: TextSpan(
             style: TextStyle(
                 color: Colors.black,
-                fontSize: 16.sp,
+                fontSize: 18.sp,
                 fontWeight: FontWeight.w500)
             ,
             children: const [
