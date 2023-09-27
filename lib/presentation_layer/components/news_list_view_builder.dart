@@ -12,7 +12,7 @@ class NewsListViewBuilder extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return FutureBuilder<List<ArticleModel>>(
-        future: NewsService().getTopHeadlines(ref.watch(categoryProvider)),
+        future: ref.watch(isEveryThingMethodProvider) != true ? NewsService().getTopHeadlines(ref.watch(categoryProvider)) : NewsService().getEverything(ref.watch(searchValueProvider)),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return NewsListView(

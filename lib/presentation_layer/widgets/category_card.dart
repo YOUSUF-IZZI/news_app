@@ -10,9 +10,11 @@ class CategoryCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Padding(
-      padding: EdgeInsets.all(8.0.h),
+      padding: EdgeInsets.only(right: 10.w, ),
       child: MaterialButton(
+        elevation: 0.5,
         onPressed: (){
+          ref.read(isEveryThingMethodProvider.notifier).state = false;
           ref.read(categoryProvider.notifier).state = category;
         },
         shape: RoundedRectangleBorder(

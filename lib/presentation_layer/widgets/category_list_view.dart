@@ -5,7 +5,6 @@ import 'package:news_app/presentation_layer/widgets/category_card.dart';
 
 class CategoryListView extends StatelessWidget {
   const CategoryListView({super.key, });
-
   final List<String> categoryList = const [
     'General',
     'Entertainment',
@@ -19,7 +18,7 @@ class CategoryListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 65.h,
+      height: 55.h,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,

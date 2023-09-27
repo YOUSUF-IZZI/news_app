@@ -12,3 +12,15 @@ final newsListProvider = StateProvider<List<ArticleModel>>((ref) {
 final categoryProvider = StateProvider<String>((ref) {
   return 'General';
 });
+
+
+// to check what endpoint should call. so if it by search or by category
+final isEveryThingMethodProvider = StateProvider<bool>((ref) {
+  return false;
+});
+
+
+// Specify selected category
+final searchValueProvider = StateProvider<String>((ref) {
+  return '';
+});
