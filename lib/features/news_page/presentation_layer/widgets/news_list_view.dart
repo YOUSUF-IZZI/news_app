@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/domain_layer/models/article_model.dart';
+import '../../domain_layer/models/article_model.dart';
 import 'news_card.dart';
 
 class NewsListView extends StatelessWidget {

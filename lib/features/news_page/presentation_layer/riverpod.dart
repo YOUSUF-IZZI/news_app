@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:news_app/domain_layer/models/article_model.dart';
+import 'package:news_app/features/news_page/domain_layer/models/article_model.dart';
 
 
 // The list that hold coming articles from api

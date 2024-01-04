@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:news_app/application_layer/services/news_service.dart';
-import 'package:news_app/domain_layer/models/article_model.dart';
-import 'package:news_app/presentation_layer/widgets/news_list_view.dart';
-import 'package:news_app/riverpod.dart';
+import 'package:news_app/features/news_page/presentation_layer/riverpod.dart';
+import '../../application_layer/services/news_service.dart';
+import '../../domain_layer/models/article_model.dart';
+import '../widgets/news_list_view.dart';
 
 
 class NewsListViewBuilder extends ConsumerWidget {
