@@ -47,7 +47,7 @@ class CustomSearchBar extends ConsumerWidget {
                         borderRadius: BorderRadius.circular(20.r),
                         borderSide: BorderSide(
                             color: AppColors.appColor,
-                            width: 4.sp
+                            width: 3.sp
                         )
                     ),
                     // before clicking
@@ -55,7 +55,7 @@ class CustomSearchBar extends ConsumerWidget {
                         borderRadius: BorderRadius.circular(20.r),
                         borderSide: BorderSide(
                             color: Theme.of(context).textTheme.bodyMedium!.color!,
-                            width: 4.0.sp
+                            width: 3.0.sp
                         )
                     )
                 ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:news_app/utils/colors.dart';
 
 
 class CustomButton extends StatelessWidget {
@@ -10,7 +11,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialButton(
       height: 50.h,
-      color: Colors.orange,
+      color: AppColors.appColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(18.r),
       ),

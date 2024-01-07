@@ -45,9 +45,9 @@ class DetailedNewsPage extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 25, left: 16, right: 16),
                 child: Text(
                   '${article.subTitle}',
+                  maxLines: 100,
                   style: TextStyle(
                       fontSize: 14.sp,
-                      //fontWeight: FontWeight.bold,
                       color: Theme.of(context).textTheme.bodyMedium?.color
                   ),
                 ),
@@ -55,26 +55,6 @@ class DetailedNewsPage extends StatelessWidget {
             )
           ],
         )
-        /*Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            article.imagePath != null ?
-            Image.network(article.imagePath!) :
-            Image.asset('assets/images/no_photo.png'),
-
-            Padding(
-              padding: const EdgeInsets.only(top: 25, left: 16, right: 16),
-              child: Text(
-                article.title ?? '',
-                style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Text(
-              article.subTitle ?? '',
-              style: TextStyle(fontSize: 12.sp, color: Colors.grey),
-            ),
-          ],
-        ),*/
       ),
     );
   }

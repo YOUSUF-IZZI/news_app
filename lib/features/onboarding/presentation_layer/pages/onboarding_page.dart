@@ -18,13 +18,10 @@ class OnboardingPage extends ConsumerWidget {
         alignment: Alignment.center,
         children: [
           PageView(
-            // We use controller in navigation and some useful things
             controller: controller,
-            // onPageChanged provide us with index number
             onPageChanged: (value) {
               ref.read(pageIndexProvider.notifier).state = value;
             },
-            //physics: const BouncingScrollPhysics(),
             children: const [
               OnboardingComponent(
                 image: 'assets/images/onboarding/News-cuate.svg',

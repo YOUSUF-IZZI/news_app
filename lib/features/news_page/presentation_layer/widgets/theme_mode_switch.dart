@@ -11,7 +11,7 @@ class ThemeModeSwitcher extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(darkModeProvider);
     return Switch.adaptive(
-      activeColor: Colors.red,
+      activeColor: Colors.deepPurple,
       hoverColor: AppColors.appColor,
       applyCupertinoTheme: true,
       focusColor: AppColors.appColor,

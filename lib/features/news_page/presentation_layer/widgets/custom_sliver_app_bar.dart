@@ -14,7 +14,7 @@ class CustomSliverAppBar extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final darkMode = ref.watch(darkModeProvider);
     return SliverAppBar(
-      //backgroundColor: Theme.of(context).appBarTheme,
+      backgroundColor: darkMode ? Colors.black : Colors.white,
       title: Text(
         'Magazine',
         style: TextStyle(
@@ -22,9 +22,8 @@ class CustomSliverAppBar extends ConsumerWidget {
             fontWeight: FontWeight.bold),
       ),
       centerTitle: true,
-      leading: const Icon(Icons.menu),
       actions: [
-        darkMode ? Icon(CupertinoIcons.moon_stars, size: 28, color: Theme.of(context).appBarTheme.iconTheme?.color) : const Icon(Icons.wb_sunny, color: AppColors.appColor,) ,
+        darkMode ? const Icon(CupertinoIcons.moon_stars, size: 28, color: Colors.white,) : const Icon(Icons.wb_sunny, color: AppColors.appColor,) ,
         const Padding(
           padding: EdgeInsets.only(right: 16),
           child: ThemeModeSwitcher(),

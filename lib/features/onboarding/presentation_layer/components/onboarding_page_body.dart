@@ -6,6 +6,7 @@ import 'package:news_app/common/widgets/custom_button.dart';
 import 'package:news_app/features/news_page/presentation_layer/pages/home_page.dart';
 import 'package:news_app/features/onboarding/presentation_layer/state_management/onboarding_page_controller_provider.dart';
 import 'package:news_app/features/onboarding/presentation_layer/state_management/page_index_provider.dart';
+import 'package:news_app/utils/colors.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -29,7 +30,7 @@ class OnboardingComponent extends StatelessWidget {
             style: TextStyle(
               fontSize: 24.h,
               fontWeight: FontWeight.bold,
-              color: Colors.orange,
+              color: AppColors.appColor,
             ),
           ),
           SizedBox(height: 15.h,),

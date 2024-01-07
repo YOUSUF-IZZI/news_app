@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:news_app/features/news_page/presentation_layer/riverpod.dart';
+import 'package:news_app/utils/colors.dart';
 import '../../application_layer/services/news_service.dart';
 import '../../domain_layer/models/article_model.dart';
 import '../widgets/news_list_view.dart';
@@ -24,7 +25,7 @@ class NewsListViewBuilder extends ConsumerWidget {
             return const SliverToBoxAdapter(
               child: Center(
                 child: CircularProgressIndicator(
-                  color: Colors.orange,
+                  color: AppColors.appColor,
                   strokeWidth: 6.0,
                 ),
               ),
